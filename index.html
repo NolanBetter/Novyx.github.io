@@ -1,14 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Novyx Network</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
 :root{
   --a1:#f97316;--a2:#ef4444;--a3:#fbbf24;
@@ -128,7 +125,7 @@ body.sbc #main{margin-left:var(--sc)}
 .fchip.on{background:color-mix(in srgb,var(--a1) 16%,transparent);border-color:color-mix(in srgb,var(--a1) 40%,transparent);color:var(--a1)}
 .fsort{height:34px;padding:0 30px 0 11px;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);color:var(--t2);font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5'%3E%3Cpath d='M0 0l4.5 5L9 0z' fill='%237a4820'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;transition:border-color .18s}
 .fsort:focus{border-color:var(--a1)}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}
 .card{background:var(--s1);border:1px solid var(--b1);border-radius:var(--r2);overflow:hidden;cursor:pointer;transition:all .2s;position:relative}
 .card:hover{transform:translateY(-4px);border-color:var(--a1);box-shadow:0 10px 35px var(--glow),0 0 0 1px color-mix(in srgb,var(--a1) 18%,transparent)}
 .card-thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg3),var(--s2));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -142,7 +139,7 @@ body.sbc #main{margin-left:var(--sc)}
 .card-badge.played{background:color-mix(in srgb,var(--a1) 28%,rgba(0,0,0,.6));color:var(--a1);border-color:color-mix(in srgb,var(--a1) 38%,transparent)}
 .card-fav{position:absolute;top:7px;right:7px;width:27px;height:27px;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.1);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;transition:all .18s;z-index:5;color:rgba(255,255,255,.3)}
 .card-fav:hover,.card-fav.on{color:var(--a3);border-color:rgba(251,191,36,.5);background:rgba(251,191,36,.15)}
-.card-info{padding:12px 14px;border-top:1px solid var(--b1)}
+.card-info{padding:9px 12px;border-top:1px solid var(--b1)}
 .card-name{font-size:13px;font-weight:600;color:var(--t1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:5px;font-family:'Syne',sans-serif}
 .card-meta{display:flex;align-items:center;justify-content:space-between}
 .card-tags{display:flex;gap:3px;flex-wrap:nowrap;overflow:hidden}
@@ -235,38 +232,6 @@ body.sbc #main{margin-left:var(--sc)}
 @keyframes rpx{from{width:0;height:0;opacity:.8}to{width:55px;height:55px;opacity:0}}
 body.perf *{animation:none!important;transition:none!important}
 body.perf #bgc{display:none}
-
-.markdown-content pre{background:var(--bg3);border:1px solid var(--b1);border-radius:8px;padding:12px;overflow-x:auto;margin:8px 0}
-.markdown-content code{font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--bg3);padding:2px 6px;border-radius:4px;color:var(--a2)}
-.markdown-content pre code{background:none;padding:0;color:var(--t2)}
-.markdown-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
-.markdown-content table thead tr{background:var(--s2)}
-.markdown-content table tbody tr:nth-child(even){background:var(--bg3)}
-.markdown-content table tbody tr:hover{background:var(--s2)}
-.markdown-content th,.markdown-content td{border:1px solid var(--b1);padding:10px 12px;text-align:left}
-.markdown-content th{background:var(--s2);font-weight:600;color:var(--t1);text-transform:uppercase;letter-spacing:0.5px;font-size:11px}
-.markdown-content blockquote{border-left:3px solid var(--a1);padding-left:12px;margin:8px 0;color:var(--t3);font-style:italic;background:var(--bg3);padding:8px 12px;border-radius:0 8px 8px 0}
-.markdown-content ul,.markdown-content ol{margin:8px 0;padding-left:24px}
-.markdown-content li{margin:6px 0;color:var(--t2);line-height:1.6}
-.markdown-content ul{list-style-type:disc}
-.markdown-content ol{list-style-type:decimal}
-.markdown-content strong{color:var(--a1);font-weight:600}
-.markdown-content em{font-style:italic;color:var(--t2)}
-.markdown-content a{color:var(--a1);text-decoration:underline}
-.markdown-content a:hover{color:var(--a2)}
-.markdown-content hr{border:none;border-top:1px solid var(--b1);margin:16px 0}
-.markdown-content h1,.markdown-content h2,.markdown-content h3,.markdown-content h4,.markdown-content h5,.markdown-content h6{color:var(--t1);margin:16px 0 8px;font-weight:600}
-.markdown-content h1{font-size:20px;border-bottom:1px solid var(--b1);padding-bottom:8px}
-.markdown-content h2{font-size:18px;border-bottom:1px solid var(--b2);padding-bottom:6px}
-.markdown-content h3{font-size:16px}
-.markdown-content h4{font-size:14px}
-.markdown-content h5{font-size:13px}
-.markdown-content h6{font-size:12px}
-.markdown-content del{text-decoration:line-through;color:var(--t3)}
-.markdown-content ins{text-decoration:underline;color:var(--a1)}
-.markdown-content sub{font-size:11px;color:var(--t3)}
-.markdown-content sup{font-size:11px;color:var(--t3)}
-
 @media(max-width:860px){
   #sb{width:var(--sc)}#main{margin-left:var(--sc)}
   .sb-brand,.ni-lbl,.ni-bdg,.sb-sec{opacity:0;pointer-events:none}
@@ -287,7 +252,7 @@ body.perf #bgc{display:none}
     <div class="sb-logo">N</div>
     <div class="sb-brand">
       <div class="sb-name">Novyx Network</div>
-      <div class="sb-ver">v1.0.2</div>
+      <div class="sb-ver">v1.0.1</div>
     </div>
   </div>
   <div class="sb-tog" id="sbTog">◀</div>
@@ -297,7 +262,6 @@ body.perf #bgc{display:none}
     <div class="ni" data-page="games" data-tip="Games" onclick="go('games')"><div class="ni-ico">🎮</div><span class="ni-lbl">Games</span><span class="ni-bdg" id="gc">0</span></div>
     <div class="ni" data-page="movies" data-tip="Movies" onclick="go('movies')"><div class="ni-ico">🎬</div><span class="ni-lbl">Movies</span><span class="ni-bdg" id="mc">0</span></div>
     <div class="ni" data-page="shows" data-tip="Shows" onclick="go('shows')"><div class="ni-ico">📺</div><span class="ni-lbl">Shows</span><span class="ni-bdg" id="sc">0</span></div>
-    <div class="ni" data-page="ai" data-tip="AI" onclick="go('ai')"><div class="ni-ico">🤖</div><span class="ni-lbl">AI</span></div>
     <div class="sb-div"></div>
     <div class="ni" data-page="other" data-tip="Other" onclick="go('other')"><div class="ni-ico">🔗</div><span class="ni-lbl">Other</span></div>
   </nav>
@@ -346,13 +310,7 @@ body.perf #bgc{display:none}
       <div class="cl-line">
         <div class="cl-entry">
           <div class="cl-dot"></div>
-          <div class="cl-ver"><span class="cl-tag">v1.0.2</span><span class="cl-date">4/15/2026</span></div>
-          <div class="cl-item">AI Addition</div>
-          <div class="cl-item">ULTIMATEUNBLOCKER Partnership</div>
-        </div>
-        <div class="cl-entry">
-          <div class="cl-dot" style="background:var(--b3)"></div>
-          <div class="cl-ver"><span class="cl-tag" style="color:var(--t3);background:transparent;border-color:var(--b2)">v1.0.1</span><span class="cl-date">3/30/2026</span></div>
+          <div class="cl-ver"><span class="cl-tag">v1.0.1</span><span class="cl-date">3/30/2026</span></div>
           <div class="cl-item">Added shows section</div>
           <div class="cl-item">Added movies section</div>
           <div class="cl-item">Updated games library</div>
@@ -403,34 +361,6 @@ body.perf #bgc{display:none}
     <div class="cgrid" id="sgrid"></div>
   </div>
 
-  <div class="page" id="page-ai">
-    <div class="sec-hdr"><div><div class="sec-eye">AI Chat</div><div class="sec-title">AI Assistant</div></div>    <div style="text-align:right;font-size:10px;color:var(--t3);font-family:'JetBrains Mono',monospace;line-height:1.4">
-      <div style="color:var(--a1);font-weight:600">Developed By ULTIMATEUNBLOCKER</div>
-      <div>Model: Gemini 3 Flash Preview</div>
-      <div>API Provider: Google AI Studio</div>
-      <div style="margin-top:4px;font-size:9px">All Rights Reserved to Google</div>
-    </div></div>
-    <div class="chat-container" style="background:var(--s1);border:1px solid var(--b1);border-radius:var(--r2);height:calc(100vh - 180px);display:flex;flex-direction:column;overflow:hidden">
-      <div class="chat-messages" id="chatMessages" style="flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px">
-        <div class="chat-message ai" style="display:flex;gap:12px;align-items:flex-start">
-          <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--a1),var(--a2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🤖</div>
-          <div style="background:var(--bg2);border:1px solid var(--b1);border-radius:12px;padding:12px 16px;max-width:80%">
-            <div style="font-size:14px;color:var(--t2);line-height:1.6">Hello! I'm your AI assistant. How can I help you today?</div>
-          </div>
-        </div>
-      </div>
-      <div class="chat-input-area" style="padding:16px;border-top:1px solid var(--b1);background:var(--bg2)">
-        <div style="display:flex;gap:10px;align-items:center">
-          <input type="text" id="chatInput" placeholder="Type your message..." style="flex:1;background:var(--s1);border:1px solid var(--b1);border-radius:var(--r);padding:12px 16px;color:var(--t1);font-size:14px;outline:none;transition:border-color .18s;font-family:'DM Sans',sans-serif" onfocus="this.style.borderColor='var(--a1)'" onblur="this.style.borderColor='var(--b1)'" onkeypress="if(event.key==='Enter')sendMessage()">
-          <button id="sendBtn" onclick="sendMessage()" style="background:var(--a1);border:none;border-radius:var(--r);padding:12px 20px;color:#000;font-size:14px;font-weight:600;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
-            <span>Send</span>
-            <span>➤</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="page" id="page-other">
     <div class="sec-hdr"><div><div class="sec-eye">Links &amp; Socials</div><div class="sec-title">Other</div></div></div>
     <div class="about-card">
@@ -438,13 +368,11 @@ body.perf #bgc{display:none}
       <div>
         <div class="about-name">Novyx Network</div>
         <div class="about-desc">Our socials and useful links are here. Come hang out with the community!</div>
-        <div class="about-badges"><span class="about-badge">v1.0.2</span><span class="about-badge">🌐 Web</span><span class="about-badge">⚡ Unblocked</span><span class="about-badge">🔥 Ember</span></div>
+        <div class="about-badges"><span class="about-badge">v1.0.1</span><span class="about-badge">🌐 Web</span><span class="about-badge">⚡ Unblocked</span><span class="about-badge">🔥 Ember</span></div>
       </div>
     </div>
     <div class="sec-eye" style="margin-bottom:12px">Quick Access</div>
     <div class="cgrid" id="ogrid"></div>
-    <div class="sec-eye" style="margin:20px 0 12px">Partners</div>
-    <div class="cgrid" id="pgrid"></div>
   </div>
 
   <div class="page" id="page-settings">
@@ -523,7 +451,7 @@ body.perf #bgc{display:none}
           <div class="set-card">
             <div class="set-ctitle">ℹ️ About Novyx Network</div>
             <div style="display:grid;gap:10px">
-              <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t3)">Version</span><span style="color:var(--a1);font-family:'JetBrains Mono',monospace">v1.0.2</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t3)">Version</span><span style="color:var(--a1);font-family:'JetBrains Mono',monospace">v1.0.1</span></div>
               <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t3)">Default Theme</span><span style="color:var(--a1);font-family:'JetBrains Mono',monospace">Ember 🔥</span></div>
               <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t3)">Status</span><span style="color:#10b981;display:flex;align-items:center;gap:5px"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block;box-shadow:0 0 6px #10b981"></span>Online</span></div>
               <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t3)">Views</span><span id="vcount" style="color:var(--t1);font-family:'JetBrains Mono',monospace">0</span></div>
@@ -597,9 +525,6 @@ const MOVIES=[
 const SHOWS=[
   {href:"shows.html",img:"",icon:"📺",tags:["Drama","Crime"]},
 ];
-const PARTNERS=[
-  {name:"ULTIMATEUNBLOCKER",href:"https://ultimateunblocker25.vercel.app",icon:"🚀",img:"ULTIMATEUNBLOCKERLOGO.ico",tags:["Unblocker","Games","Library"]},
-];
 const OTHER=[
   {name:"Discord",href:"https://discord.gg/c2C8j99Rap",icon:"🗨️"},
 ];
@@ -623,10 +548,6 @@ const EFFECTS=[
 ];
 const FX_STYLES=['Sparks','Ripple','Both','Confetti','Stars'];
 const W_OPTS=['time','date','battery','custom','none'];
-
-const AI_MODEL = 'gemini-3-flash-preview';
-const AI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:streamGenerateContent?key=AQ.Ab8RN6KGPnOtrFYTvad5aNcPV4s_8fjDZYKXhqiVeoTiaWY3zQ';
-let chatHistory = [];
 
 function ls(k){return localStorage.getItem(k);}
 function sv(k,v){localStorage.setItem('nvx_'+k,typeof v==='object'?JSON.stringify(v):String(v));}
@@ -654,21 +575,6 @@ const S={
 };
 
 window.addEventListener('DOMContentLoaded',()=>{
-  if(typeof marked !== 'undefined'){
-    console.log('Marked.js loaded successfully');
-    marked.setOptions({
-      gfm: true,
-      tables: true,
-      breaks: false,
-      pedantic: false,
-      sanitize: false,
-      smartLists: true,
-      smartypants: false
-    });
-    console.log('Marked configured with tables:', marked.options.tables);
-  } else {
-    console.error('Marked.js failed to load');
-  }
   applyTheme(S.theme,true);applyEffect(S.effect);applyPerf();applySb();
   updateCounts();renderAll();buildSettings();updateWidget();updateStats();
   renderRecent();handleVisit();setupInact();setupClickFx();setupKeys();
@@ -677,175 +583,13 @@ window.addEventListener('DOMContentLoaded',()=>{
   document.addEventListener('click',hideCtx);
 });
 
-const TITLES={home:'Home',games:'Games',movies:'Movies',shows:'Shows',ai:'AI',other:'Other',settings:'Settings'};
+const TITLES={home:'Home',games:'Games',movies:'Movies',shows:'Shows',other:'Other',settings:'Settings'};
 function go(page){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.getElementById('page-'+page).classList.add('on');
   document.querySelectorAll('.ni').forEach(n=>n.classList.toggle('on',n.dataset.page===page));
   document.getElementById('tbtitle').textContent=TITLES[page]||page;
   sv('page',page);
-}
-
-async function sendMessage(){
-  const input = document.getElementById('chatInput');
-  const message = input.value.trim();
-  if(!message)return;
-
-  const chatMessages = document.getElementById('chatMessages');
-  const sendBtn = document.getElementById('sendBtn');
-
-  input.value = '';
-  sendBtn.disabled = true;
-  sendBtn.innerHTML = '<span>Sending...</span>';
-
-  addMessage(message, 'user');
-  chatHistory.push({role:'user', content:message});
-
-  const responseDiv = addMessage('', 'ai', true);
-  let retryCount = 0;
-
-  while(true){
-    try{
-      const responseText = await streamAIResponse(responseDiv);
-      chatHistory.push({role:'assistant', content:responseText});
-      break;
-    }catch(error){
-      console.error('AI Error:', error);
-      if(error.message === 'Image too large'){
-        break;
-      }
-      retryCount++;
-      responseDiv.textContent = `Retrying... (${retryCount})`;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-    }
-  }
-
-  sendBtn.disabled = false;
-  sendBtn.innerHTML = '<span>Send</span><span>➤</span>';
-  input.focus();
-}
-
-function addMessage(content, sender, isLoading = false){
-  const chatMessages = document.getElementById('chatMessages');
-  const messageDiv = document.createElement('div');
-  messageDiv.className = 'chat-message ' + sender;
-  messageDiv.style.display = 'flex';
-  messageDiv.style.gap = '12px';
-  messageDiv.style.alignItems = 'flex-start';
-
-  const avatar = sender === 'user' ? '👤' : '🤖';
-  const avatarBg = sender === 'user' ? 'linear-gradient(135deg,var(--b2),var(--b3))' : 'linear-gradient(135deg,var(--a1),var(--a2))';
-
-  const renderedContent = sender === 'ai' && !isLoading && content
-    ? marked.parse(content)
-    : (content || (isLoading ? '<span class="typing-indicator">...</span>' : ''));
-
-  messageDiv.innerHTML = `
-    <div style="width:36px;height:36px;background:${avatarBg};border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">${avatar}</div>
-    <div style="background:var(--bg2);border:1px solid var(--b1);border-radius:12px;padding:12px 16px;max-width:80%">
-      <div class="message-content markdown-content" style="font-size:14px;color:var(--t2);line-height:1.6">${renderedContent}</div>
-    </div>
-  `;
-
-  chatMessages.appendChild(messageDiv);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-  return messageDiv.querySelector('.message-content');
-}
-
-async function streamAIResponse(contentDiv, retryCount = 0){
-  const messages = [
-    {role:'user', parts:[{text:'You are a helpful AI assistant. Be concise and friendly.'}]},
-    ...chatHistory.slice(-10).map(msg => ({
-      role: msg.role === 'assistant' ? 'model' : 'user',
-      parts: [{text: msg.content}]
-    }))
-  ];
-
-  const response = await fetch(AI_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      contents: messages,
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 2048
-      }
-    })
-  });
-
-  if(!response.ok){
-    console.log('API Error:', response.status, response.statusText);
-    const errorText = await response.text();
-    console.log('Error response:', errorText);
-    if(response.status === 413){
-      contentDiv.textContent = 'Image Too Large try again';
-      throw new Error('Image too large');
-    }
-    if(response.status === 429 && retryCount < 3){
-      const waitTime = Math.pow(2, retryCount) * 1000;
-      contentDiv.textContent = `Rate limited. Retrying in ${waitTime/1000}s... (${retryCount + 1}/3)`;
-      await new Promise(resolve => setTimeout(resolve, waitTime));
-      return streamAIResponse(contentDiv, retryCount + 1);
-    }
-    throw new Error(`API request failed: ${response.status} ${response.statusText}`);
-  }
-
-  const reader = response.body.getReader();
-  const decoder = new TextDecoder();
-  let fullResponse = '';
-  let buffer = '';
-
-  while(true){
-    const {done, value} = await reader.read();
-    if(done) break;
-
-    buffer += decoder.decode(value);
-    console.log('Buffer:', buffer);
-
-    try{
-      const data = JSON.parse(buffer);
-      console.log('Parsed data:', data);
-      
-      if(Array.isArray(data)){
-        for(const item of data){
-          const content = item.candidates?.[0]?.content?.parts?.[0]?.text;
-          if(content){
-            fullResponse += content;
-            contentDiv.textContent = fullResponse;
-            document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
-          }
-        }
-      } else {
-        const content = data.candidates?.[0]?.content?.parts?.[0]?.text;
-        if(content){
-          fullResponse += content;
-          contentDiv.textContent = fullResponse;
-          document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
-        }
-      }
-      
-      buffer = '';
-    }catch(e){
-      console.log('Parse error (incomplete data), continuing to buffer:', e);
-    }
-  }
-
-  // Parse markdown after streaming completes
-  console.log('Full response length:', fullResponse.length);
-  console.log('Response preview:', fullResponse.substring(0, 200));
-  if(typeof marked !== 'undefined'){
-    console.log('Parsing markdown...');
-    const parsed = marked.parse(fullResponse);
-    console.log('Parsed HTML length:', parsed.length);
-    contentDiv.innerHTML = parsed;
-  } else {
-    console.error('Marked not available');
-    contentDiv.textContent = fullResponse;
-  }
-
-  return fullResponse;
 }
 
 function toggleSb(){S.sbCol=!S.sbCol;applySb();sv('sbCol',S.sbCol);}
@@ -934,8 +678,6 @@ function renderShows(){
 function renderOther(){
   const g=document.getElementById('ogrid');g.innerHTML='';
   norm(OTHER).forEach(i=>g.appendChild(mkOther(i)));
-  const p=document.getElementById('pgrid');p.innerHTML='';
-  norm(PARTNERS).forEach(i=>p.appendChild(mkCard(i,'partners')));
 }
 
 function setF(type,el,val){
@@ -989,7 +731,6 @@ function openSrch(){
   doSrch('');renderSrchHist();
 }
 function closeSrch(e){if(!e||e.target===document.getElementById('srch'))document.getElementById('srch').classList.remove('on');}
-
 function doSrch(q){
   const res=document.getElementById('srchRes');
   const all=[
@@ -998,12 +739,11 @@ function doSrch(q){
     ...norm(SHOWS).map(i=>({...i,type:'shows',tl:'Show'})),
     ...norm(OTHER).map(i=>({...i,type:'other',tl:'Link'})),
   ];
-  const lq=q.toLowerCase();
-  const filtered=all.filter(i=>i.name.toLowerCase().includes(lq));
+  const filtered=q?all.filter(i=>i.name.toLowerCase().includes(q.toLowerCase())):all.slice(0,8);
+  if(!filtered.length){res.innerHTML=`<div class="srch-empty">No results for "${q}"</div>`;return;}
   res.innerHTML='';
-  filtered.slice(0,8).forEach(item=>{
-    const div=document.createElement('div');
-    div.className='srch-item';
+  filtered.forEach(item=>{
+    const div=document.createElement('div');div.className='srch-item';
     div.innerHTML=`<div class="srch-ico">${item.icon||'📄'}</div><div><div class="srch-nm">${item.name}</div><div class="srch-cat">${item.tl}</div></div>`;
     div.addEventListener('click',()=>{addSH(q||item.name);closeSrch();if(item.type==='other')window.open(item.href,'_blank');else openItem(item,item.type);});
     res.appendChild(div);
